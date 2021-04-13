@@ -35,7 +35,7 @@ public class LoginPage extends BasePage{
     // check if user is logged in, i.e. the (github) logo is visible
     public boolean isLoggedIn() throws InterruptedException {
         Thread.sleep(5000);
-        return !driver.findElements(By.id("/html/body/div[1]/header/div[1]/a")).isEmpty();
+        return !driver.findElements(By.xpath("/html/body/div[1]/header/div[1]/a")).isEmpty();
     }
 
 }

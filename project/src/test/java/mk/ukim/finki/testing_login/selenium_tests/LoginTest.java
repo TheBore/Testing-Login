@@ -63,12 +63,13 @@ public class LoginTest {
     public void successfulLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        loginPage.login("TheBore", "setiebam123");
+        // TODO Change username and password parameters here. Intentionally empty!
+        loginPage.login("", "");
         assertTrue(loginPage.isLoggedIn());
     }
 
     private WebDriver getDriver() {
-        System.setProperty("webdriver.chrome.driver", "/C:/Users/boris/Documents/GitHub/Library-Spring-React/Testing_Login/src/main/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/boris/Documents/GitHub/Testing-Login/project/src/main/resources/drivers/chromedriver.exe");
         return new ChromeDriver();
     }
 
